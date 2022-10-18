@@ -14,3 +14,15 @@ deployments/local
 deployments/cannon
 deployments/hardhat
 contracts/Router.sol
+
+# Foundry - Compiler files
+forge-cache/
+out/
+
+# Foundry - Ignores development broadcast logs
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+# Dotenv file
+.env

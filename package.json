@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx hardhat test --network hardhat"
+    "test": "npx hardhat test --network hardhat && forge test"
   },
   "author": "",
   "license": "ISC",
