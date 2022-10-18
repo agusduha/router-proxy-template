@@ -14,12 +14,22 @@ jobs:
     strategy:
       fail-fast: true
 
-    name: Foundry project
+    name: Hardhat + Foundry tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: recursive
+
+      - name: Setup Node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: |
+          npm ci
 
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
@@ -36,27 +46,6 @@ jobs:
         run: |
           forge test -vvv
         id: forge-test
-
-  hardhat:
-    strategy:
-      fail-fast: true
-
-    name: Hardhat project
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-
-      - name: Setup Node 16
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16.x"
-          cache: "npm"
-
-      - name: Install Node dependencies
-        run: |
-          npm ci
 
       - name: Run Hardhat tests
         run: |
