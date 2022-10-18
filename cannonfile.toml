@@ -1,4 +1,4 @@
-name = "router-template"
+name = "router-proxy-template"
 version = "<%= package.version %>"
 description = "Router template"
 

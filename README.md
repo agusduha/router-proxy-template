@@ -1,6 +1,6 @@
 # <h1 align="center"> Synthetix Router Proxy Template | Hardhat + Foundry </h1>
 
-![Github Actions](https://github.com/agusduha/router-template/workflows/test/badge.svg)
+![Github Actions](https://github.com/agusduha/router-proxy-template/workflows/test/badge.svg)
 
 This project demonstrates a basic use case (Lock), using [Synthetix Router Proxy](https://sips.synthetix.io/sips/sip-307/) architecture. It comes with sample contracts representing modules, storages and interfaces. Also a Hardhat test for the whole system contracts, a Foundry test for an individual module, and a script that deploys the system.
 
